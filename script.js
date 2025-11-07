@@ -203,11 +203,13 @@ window.addEventListener('load', () => {
       // Calculate the target scroll position to center the vuosq title
       const targetY = vuosqSection.offsetTop - (window.innerHeight / 2) + (vuosqSection.offsetHeight / 2);
       
-      // Use GSAP for smooth scroll animation
+      // Custom smooth scroll animation using GSAP
       gsap.to(window, {
-        duration: 3,
-        scrollTo: targetY,
-        ease: 'power2.inOut'
+        duration: 6,
+        scrollTo: { y: targetY, autoKill: false },
+        ease: 'power2.inOut',
+        onStart: () => console.log('Scroll animation started'),
+        onComplete: () => console.log('Scroll complete')
       });
     }
   }, 1000);
