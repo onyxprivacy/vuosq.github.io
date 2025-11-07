@@ -258,7 +258,7 @@
       color-mix(in oklch, canvasText, canvas 20%),
       color-mix(in oklch, canvasText, canvas 30%)
     );
-    opacity: 0.9;
+    opacity: 1;
     margin: 0;
     line-height: 1.2;
     font-weight: 500;
