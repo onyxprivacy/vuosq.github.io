@@ -176,6 +176,7 @@
 
     h2 {
       --font-level: 6;
+      --font-size-min: 24;
     }
   }
   main {
@@ -254,6 +255,7 @@
 
   .tagline {
     --font-level: 3;
+    --font-size-min: 16;
     color: light-dark(
       color-mix(in oklch, canvasText, canvas 20%),
       color-mix(in oklch, canvasText, canvas 30%)
@@ -263,6 +265,79 @@
     line-height: 1.2;
     font-weight: 500;
     text-wrap: balance;
+  }
+
+  .social-icons {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .social-link {
+    color: light-dark(
+      color-mix(in oklch, canvasText, canvas 40%),
+      color-mix(in oklch, canvasText, canvas 50%)
+    );
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+  }
+
+  .social-link:hover {
+    color: canvasText;
+    transform: translateY(-2px);
+  }
+
+  .social-link svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .learn-more-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+    padding: 0.625rem 1.25rem;
+    background: light-dark(
+      color-mix(in oklch, canvasText, transparent 92%),
+      color-mix(in oklch, canvasText, transparent 88%)
+    );
+    color: light-dark(
+      color-mix(in oklch, canvasText, canvas 20%),
+      color-mix(in oklch, canvasText, canvas 30%)
+    );
+    border: 1px solid light-dark(
+      color-mix(in oklch, canvasText, transparent 88%),
+      color-mix(in oklch, canvasText, transparent 82%)
+    );
+    border-radius: 9999px;
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+
+  .learn-more-btn:hover {
+    background: light-dark(
+      color-mix(in oklch, canvasText, transparent 88%),
+      color-mix(in oklch, canvasText, transparent 82%)
+    );
+    color: canvasText;
+    transform: translateX(2px);
+  }
+
+  .learn-more-btn svg {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.3s ease;
+  }
+
+  .learn-more-btn:hover svg {
+    transform: translateX(3px);
   }
 }
 
